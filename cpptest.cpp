@@ -39,6 +39,13 @@ struct car
     int year;
 };
 
+enum Level
+{
+    LOW = 10,
+    MEDIUM, // 11
+    HIGH    // 12
+};
+
 int main()
 {
 
@@ -296,6 +303,7 @@ int main()
     cout << myStructure.myNum << "\n";
     cout << myStructure.myString << "\n";
 
+    // struct
     myDataType myVar;
 
     car myCar;
@@ -303,4 +311,8 @@ int main()
     myCar.brand = "Toyata";
     myCar.model = "Hilux";
     myCar.year = 2010;
+
+    // enum
+    enum Level myLevel = HIGH;
+    cout << myLevel;
 }
