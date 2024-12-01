@@ -8,18 +8,56 @@ using namespace std;
 
 const long phone_number = 9123456789;
 
-void print_phone_number()
+void printPhoneNumber()
 {
     cout << phone_number << endl;
 }
 
-bool is_valid_name(string name)
+bool isValidName(string name)
 {
     return name.length() > 0;
 }
 
 int main()
 {
+
+    // 8 bits = 1 bytes
+
+    int myNum = 5;            // Integer (whole number without decimals) 2 or 4 bytes
+    double myFloatNum = 5.99; // Floating point number (with decimals) 8 bytes
+    float totalNum = 3.2;     // Floating point number (with decimals) 4 bytes
+    char myLetter = 'D';      // Character 1 bytes
+    string myText = "Hello";  // String (text)  depend on the characters size
+    bool myBoolean = true;    // Boolean (true or false) 1 bytes
+
+    // Multi variable
+    int x = 5, y = 6, z = 50;
+    cout << x + y + z;
+
+    // constant
+    const int myNum = 15; // myNum will always be 15
+    // myNum = 16; // error: assignment of read-only variable 'myNum'
+    const int minutesPerHour = 60;
+    const float PI = 3.14;
+
+    // Create integer variables
+    int length = 4;
+    int width = 6;
+    int area;
+
+    // Calculate the area of a rectangle
+    area = length * width;
+
+    // Print the variables
+    cout << "Length is: " << length << "\n";
+    cout << "Width is: " << width << "\n";
+    cout << "Area of the rectangle is: " << area << "\n";
+
+    // Command Line User Input
+    // int x;
+    // cout << "Type a number: ";       // Type a number and press enter
+    // cin >> x;                        // Get user input from the keyboard
+    // cout << "Your number is: " << x; // Display the input value
 
     // msg array
     vector<string> msg{"Hello", "C++", "World", "from", "VS Code", "and the C++ extension!"};
@@ -114,9 +152,9 @@ int main()
 
     string name = "theik chan";
     // function
-    print_phone_number();
+    printPhoneNumber();
 
-    if (is_valid_name(name))
+    if (isValidName(name))
     {
         cout << "valid name" << endl;
     }
