@@ -3,6 +3,7 @@
 #include <string>
 #include <set>
 #include <map>
+#include <cmath>
 
 using namespace std;
 
@@ -70,6 +71,14 @@ int main()
     fullName.at(1); // access with position
 
     cout << fullName[fullName.length() - 1] << endl; // print last character in full name string variable
+
+    // Math operation
+    cout << max(10, 5);
+    cout << min(10, 5);
+
+    cout << sqrt(8);
+    cout << round(2.79);
+    cout << log(2);
 
     // msg array
     vector<string> msg{"Hello", "C++", "World", "from", "VS Code", "and the C++ extension!"};
