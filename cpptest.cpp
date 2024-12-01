@@ -80,6 +80,20 @@ int main()
     cout << round(2.79);
     cout << log(2);
 
+    // boolean operation
+    int myAge = 25;
+    int votingAge = 18;
+
+    cout << (myAge >= votingAge); // returns 1 (true), meaning 25 year olds are allowed to vote!
+    if (myAge >= votingAge)
+    {
+        cout << "Old enough to vote!";
+    }
+    else
+    {
+        cout << "Not old enough to vote.";
+    }
+
     // msg array
     vector<string> msg{"Hello", "C++", "World", "from", "VS Code", "and the C++ extension!"};
 
