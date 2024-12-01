@@ -59,6 +59,18 @@ int main()
     // cin >> x;                        // Get user input from the keyboard
     // cout << "Your number is: " << x; // Display the input value
 
+    string firstName = "Theik";
+    string lastName = "\"Chan\"";
+    // string fullName = firstName + " " + lastName; // // string concatenation
+    string fullName = firstName.append(lastName); // string concatenation
+    cout << fullName;
+
+    // Access String
+    fullName.at(0); // access with position
+    fullName.at(1); // access with position
+
+    cout << fullName[fullName.length() - 1] << endl; // print last character in full name string variable
+
     // msg array
     vector<string> msg{"Hello", "C++", "World", "from", "VS Code", "and the C++ extension!"};
 
