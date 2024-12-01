@@ -315,4 +315,26 @@ int main()
     // enum
     enum Level myLevel = HIGH;
     cout << myLevel;
+
+    // Reference
+    string food = "Pizza";
+    string &meal = food;  // reference
+    string *ptr = &food;  // pointer
+    cout << ptr << "\n";  // print pointer reference memory address
+    cout << *ptr << "\n"; // print value of pointer e.g Pizza
+
+    // modify pointer value
+    *ptr = "Hamburger";
+
+    // Output the new value of the pointer (Hamburger)
+    cout << *ptr << "\n";
+
+    // Output the new value of the food variable (Hamburger)
+    cout << food << "\n";
+
+    cout << food << endl; // Outputs Pizza
+    cout << meal << endl; // Outputs Pizza
+
+    // memory address(hexadecimal number e.g 0x) of food
+    cout << &food << endl;
 }
