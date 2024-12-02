@@ -46,6 +46,40 @@ enum Level
     HIGH    // 12
 };
 
+void displayName(string name = "N/A")
+{
+    cout << name << endl;
+}
+
+int getYear()
+{
+    return 2024;
+}
+
+// pass by reference
+void swapNumber(int &x, int &y)
+{
+    int z = x;
+    x = y;
+    y = z;
+}
+
+void modifyName(string &name)
+{
+    name += " chan";
+}
+
+// function overload same name with difference parameters
+int plusFunc(int x, int y)
+{
+    return x + y;
+}
+
+double plusFunc(double x, double y)
+{
+    return x + y;
+}
+
 int main()
 {
 
@@ -91,6 +125,7 @@ int main()
     string lastName = "\"Chan\"";
     // string fullName = firstName + " " + lastName; // // string concatenation
     string fullName = firstName.append(lastName); // string concatenation
+    // string fullName = format("{}.{}", firstName, lastName);
     cout << fullName;
 
     // Access String
@@ -98,6 +133,8 @@ int main()
     fullName.at(1); // access with position
 
     cout << fullName[fullName.length() - 1] << endl; // print last character in full name string variable
+
+    displayName(fullName);
 
     // Math operation
     cout << max(10, 5);
@@ -337,4 +374,24 @@ int main()
 
     // memory address(hexadecimal number e.g 0x) of food
     cout << &food << endl;
+
+    int currentYear = getYear();
+    cout << currentYear << endl;
+
+    int num1 = 10;
+    int num2 = 20;
+    swapNumber(num1, num2); // pass by reference
+
+    cout << num1 << num2 << endl;
+
+    string name = "theik";
+    modifyName(name);
+
+    cout << name << endl;
+
+    // function overload
+    int myNum1 = plusFunc(8, 5);
+    double myNum2 = plusFunc(4.3, 6.26);
+    cout << "Int: " << myNum1 << "\n";
+    cout << "Double: " << myNum2;
 }
