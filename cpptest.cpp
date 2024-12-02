@@ -80,6 +80,19 @@ double plusFunc(double x, double y)
     return x + y;
 }
 
+// Recursive function
+int sum(int k)
+{
+    if (k > 0)
+    {
+        return k + sum(k - 1);
+    }
+    else
+    {
+        return 0;
+    }
+}
+
 int main()
 {
 
@@ -394,4 +407,8 @@ int main()
     double myNum2 = plusFunc(4.3, 6.26);
     cout << "Int: " << myNum1 << "\n";
     cout << "Double: " << myNum2;
+
+    // function call to recursive function
+    int result = sum(10);
+    cout << result;
 }
