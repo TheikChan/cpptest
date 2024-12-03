@@ -1,0 +1,9 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/theikchan/Documents/proj/c++/cpptest/employee'
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003EF4, symSize: 0x50 }
+  - { offsetInCU: 0x2C79, offset: 0x2C79, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003EF4, symSize: 0x50 }
+  - { offsetInCU: 0x2CE9, offset: 0x2CE9, size: 0x8, addend: 0x0, symName: __ZN8Employee9setSalaryEi, symObjAddr: 0x50, symBinAddr: 0x100003F44, symSize: 0x20 }
+  - { offsetInCU: 0x2D1B, offset: 0x2D1B, size: 0x8, addend: 0x0, symName: __ZN8Employee9getSalaryEv, symObjAddr: 0x70, symBinAddr: 0x100003F64, symSize: 0x18 }
+...
