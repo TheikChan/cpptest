@@ -40,7 +40,7 @@ std::ostream &operator<<(std::ostream &outs, const Fraction &f)
 class Item
 {
 public:
-    Item(int newId): id(newId) { }
+    Item(int newId) : id(newId) {}
     int id;
 };
 
@@ -83,7 +83,7 @@ int main()
         }
 
         std::cout << "Successfully opened " + fileName << std::endl;
-        nonFileStream.close()
+        nonFileStream.close();
     }
     catch (std::string message)
     {
@@ -160,7 +160,7 @@ int main()
     std::cout << uniquePtr2->id << std::endl;
 
     // shared pointer = shared_ptr
-    // object in heap pointed by multiple shared pointer and shared ownership of object 
+    // object in heap pointed by multiple shared pointer and shared ownership of object
     // object automatically deleted when last shared pointers no longer point to object and object is deleted only once
     std::shared_ptr<Item> sharPtr1(new Item(100));
     std::shared_ptr<Item> sharPtr2(sharPtr1);
