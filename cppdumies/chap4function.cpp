@@ -41,6 +41,27 @@ void displayName(std::string name, int age)
 {
 }
 
+// Function Object/Functos
+class BlogPost
+{
+public:
+    BlogPost(const std::string &title) : title(title) {}
+    std::string getTitle() const { return title; }
+
+private:
+    std::string title;
+};
+
+class CompareBlogPosts
+{
+public:
+    // Function object or Functor using operator ()
+    bool operator()(const BlogPost &a, const BlogPost &b) const
+    {
+        return a.getTitle() < b.getTitle();
+    }
+};
+
 // int argc - how many arguments appear on command line
 // char *argv[] - provide list of command line argments in array
 
@@ -88,6 +109,10 @@ int main(int argc, char *argv[])
 
     // replace from a string
     words.replace(4, 5, "body"); // replace start index, replace max length, replace characters
+
+    // calling STL sort algorith using functor as parameter
+    std::vector<BlogPost> posts = {BlogPost("post 2"), BlogPost("post 1")};
+    std::sort(posts.begin(), posts.end(), CompareBlogPosts());
 }
 
 // function implementation
