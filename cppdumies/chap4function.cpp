@@ -58,8 +58,19 @@ public:
     // Function object or Functor using operator ()
     bool operator()(const BlogPost &a, const BlogPost &b) const
     {
-        return a.getTitle() < b.getTitle();
+        if (a.getTitle().length() == 0)
+        {
+            throw BlogPostException("Empty title");
+        }
+        else
+            return a.getTitle() < b.getTitle();
     }
+};
+
+class BlogPostException : public std::runtime_error
+{
+public:
+    BlogPostException(const std::string &message) : std::runtime_error(message) {}
 };
 
 // int argc - how many arguments appear on command line
